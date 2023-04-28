@@ -28,7 +28,14 @@ public class MainControllers {
         model.addAttribute("monarky"  ,countryServices.monarkye());
         model.addAttribute("messi"  ,countryServices.messi());
         model.addAttribute("region"  ,countryServices.region());
-
+        model.addAttribute("allCountry" , countryServices.getAll("Slovene"));
+        model.addAttribute("mossttt" , countryServices.mostC());
+        model.addAttribute("mexico" , countryServices.mexico("Mexico"));
+        model.addAttribute("langu" , countryServices.big());
+        model.addAttribute("surfaceJpql" , countryServices.surfaceJpql());
+        model.addAttribute("monarchys" , countryServices.monarchy());
+        model.addAttribute("argentinas" , countryServices.argentinas());
+        model.addAttribute("regionJpQl" , countryServices.regionJpQl());
         return "index";
     }
 }

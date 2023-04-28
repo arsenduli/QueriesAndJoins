@@ -13,9 +13,10 @@ public class Language {
     private String language;
     private String is_official;
     private Double percentage;
-    private Integer country_id;
 
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "country_id" )
+    private Country countrys;
     public Language() {}
 
     public Long getId() {
@@ -58,11 +59,12 @@ public class Language {
         this.percentage = percentage;
     }
 
-    public int getCountry_id() {
-        return country_id;
+
+    public Country getCountrys() {
+        return countrys;
     }
 
-    public void setCountry_id(Integer country_id) {
-        this.country_id = country_id;
+    public void setCountrys(Country countrys) {
+        this.countrys = countrys;
     }
 }

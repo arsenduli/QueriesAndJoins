@@ -16,9 +16,10 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
 <div>
     <h1> Querry One</h1>
-    <table>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>Country</th>
@@ -39,8 +40,30 @@
 
 </div>
 <div>
-    <h1> Query tow</h1>
-    <table>
+    <h1> Query One JPQL</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Language</th>
+            <th>Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${allCountry}">
+            <tr>
+                <td>${item[0].name}</td>
+                <td>${item[1].language}</td>
+                <td>${item[1].percentage}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
+    <h1> Query Tow</h1>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>Country</th>
@@ -59,8 +82,28 @@
 
 </div>
 <div>
+    <h1> Query Tow JPQL</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Cites</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${mossttt}">
+            <tr>
+                <td>${item[0].name}</td>
+                <td>${item[1]}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
     <h1> Query Three</h1>
-    <table>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>Cities</th>
@@ -79,8 +122,28 @@
 
 </div>
 <div>
+    <h1> Query Three JPQL</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Cities</th>
+            <th>Popullation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${mexico}">
+            <tr>
+                <td>${item[1].name}</td>
+                <td>${item[1].population}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
     <h1> Query Four</h1>
-    <table>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>Country</th>
@@ -92,6 +155,26 @@
             <tr>
                 <td>${item[0]}</td>
                 <td>${item[1]}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
+    <h1> Query Four JPQL</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Prestages</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${langu}">
+            <tr>
+                <td>${item[0].name}</td>
+                <td>${item[1].percentage}</td>
             </tr>
         </c:forEach>
         </tbody>
@@ -100,32 +183,12 @@
 </div>
 <div>
     <h1> Query Five</h1>
-    <table>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>Country</th>
-            <th>Prestages</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach var="item" items="${lang}">
-            <tr>
-                <td>${item[0]}</td>
-                <td>${item[1]}</td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
-
-</div>
-<div>
-    <h1> Query Six</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>Country</th>
-            <th>Surfaces</th>
-            <th>Popullation</th>
+            <th> Surface Area</th>
+            <th>Population</th>
         </tr>
         </thead>
         <tbody>
@@ -141,8 +204,78 @@
 
 </div>
 <div>
+    <h1> Query Five JPQL</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th> Surface Area</th>
+            <th>Population</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${surfaceJpql}">
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.surface_area}</td>
+                <td>${item.population}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
+    <h1> Query Six</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Surfaces</th>
+            <th>Government </th>
+            <th>Life Expectancy</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${monarky}">
+            <tr>
+                <td>${item[0]}</td>
+                <td>${item[1]}</td>
+                <td>${item[2]}</td>
+                <td>${item[3]}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
+    <h1> Query Six JPQL</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Surfaces</th>
+            <th>Government </th>
+            <th>Life Expectancy</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${monarchys}">
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.surface_area}</td>
+                <td>${item.government_form}</td>
+                <td>${item.life_expectancy}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
     <h1> Query Seven</h1>
-    <table>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>Country</th>
@@ -165,8 +298,32 @@
 
 </div>
 <div>
-    <h1> Query eight</h1>
-    <table>
+    <h1> Query Seven JPQL</h1>
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Cities</th>
+            <th>District</th>
+            <th>Citi Popullation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="item" items="${argentinas}">
+            <tr>
+                <td>${item[0].name}</td>
+                <td>${item[1].name}</td>
+                <td>${item[1].district}</td>
+                <td>${item[1].population}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+</div>
+<div>
+    <h1> Query Eight</h1>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>region</th>
@@ -185,8 +342,8 @@
 
 </div>
 <div>
-    <h1> Query nine</h1>
-    <table>
+    <h1> Query Eight JPQL</h1>
+    <table class="table table-striped-columns">
         <thead>
         <tr>
             <th>region</th>
@@ -194,15 +351,16 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="item" items="${coun}">
+        <c:forEach var="item" items="${regionJpQl}">
             <tr>
-                <td>${item.name}</td>
-                <td>${item.name}</td>
+                <td>${item[0]}</td>
+                <td>${item[1]}</td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
 
+</div>
 </div>
 </body>
 </html>

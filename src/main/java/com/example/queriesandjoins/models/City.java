@@ -14,10 +14,11 @@ public class City {
     private String country_code;
     private String district;
     private Integer population;
-    private Integer country_id;
 
 
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "country_id" )
+    private Country country;
     public City() {}
 
     public Long getId() {
@@ -60,11 +61,13 @@ public class City {
         this.population = population;
     }
 
-    public int getCountry_id() {
-        return country_id;
+
+
+    public Country getCountry() {
+        return country;
     }
 
-    public void setCountry_id(Integer country_id) {
-        this.country_id = country_id;
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }

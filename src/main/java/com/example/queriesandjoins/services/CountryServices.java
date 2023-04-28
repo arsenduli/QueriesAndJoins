@@ -41,6 +41,30 @@ public class CountryServices {
         return countryRepo.region();
     }
 
+public List<Object[]> getAll(String language){
+        return countryRepo.findAllCountryAndLanguages(language);
+}
+public List<Object[]> mostC(){
+        return countryRepo.findCountryWithMostCities();
+}
+public List<Object[]> mexico(String name){
+        return countryRepo.mexicos(name);
+}
 
+public List<Object[]> big(){
+        return countryRepo.language();
+}
+public List<Country> surfaceJpql(){
+        return countryRepo.surfaceJpql();
+}
+    public List<Country> monarchy(){
+        return countryRepo.monarchy();
+    }
+    public List<Object[]> argentinas(){
+        return countryRepo.argentinas();
+    }
 
+    public  List<Object[]> regionJpQl(){
+        return countryRepo.regionJpQl();
+    }
 }

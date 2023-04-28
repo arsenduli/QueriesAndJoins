@@ -27,7 +27,10 @@ public class Country {
     private String code2;
 
 
-
+    @OneToMany(mappedBy = "country" , fetch = FetchType.LAZY , cascade = CascadeType.ALL)
+    private List<City> cities;
+    @OneToMany(mappedBy = "countrys" , fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Language> languages;
     public Country() {
     }
 
@@ -157,5 +160,21 @@ public class Country {
 
     public void setCode2(String code2) {
         this.code2 = code2;
+    }
+
+    public List<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(List<City> cities) {
+        this.cities = cities;
+    }
+
+    public List<Language> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(List<Language> languages) {
+        this.languages = languages;
     }
 }
